@@ -144,10 +144,11 @@ network_config_managerlib = library('network_config_manager',
 
 network_config_manager = executable(
                               'nmctl',
-                              network_config_manager_sources,
+                              ['src/manager/network-config-manager.c'],
                               include_directories : includes,
                               dependencies : [
                               libsystemd, glib_dep, udev_dep, yaml_dep],
+                              link_with : network_config_managerlib,
                               install : true)
 
 pkg = import('pkgconfig')

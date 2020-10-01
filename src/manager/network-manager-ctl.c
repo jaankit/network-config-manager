@@ -1676,9 +1676,3 @@ _public_ int ncm_cli_run(int argc, char *argv[]) {
 
         return cli_run_command(m, argc, argv);
 }
-
-int main(int argc, char *argv[]) {
-        g_log_set_default_handler (g_log_default_handler, NULL);
-
-        return ncm_cli_run(argc, argv);
-}
